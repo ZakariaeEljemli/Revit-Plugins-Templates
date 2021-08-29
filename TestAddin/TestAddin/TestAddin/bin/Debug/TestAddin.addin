@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Assembly>TestAddin.dll</Assembly>
+    <AddInId>59f65621-05c0-43fe-ad21-5d5763553994</AddInId>
+    <FullClassName>TestAddin.StartUpCmd</FullClassName>
+    <VendorId>RPCA</VendorId>
+    <Text>TestAddin.StartUpCmd</Text>
+    <VisibilityMode>AlwaysVisible</VisibilityMode>
+    <Discipline>Any</Discipline>
+    <LanguageType>Unknown</LanguageType>
+  </AddIn>
+</RevitAddIns>
