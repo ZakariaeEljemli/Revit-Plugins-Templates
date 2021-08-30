@@ -1,16 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAddin", "TestAddin\TestAddin.csproj", "{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		2018|Any CPU = 2018|Any CPU
+		2019|Any CPU = 2019|Any CPU
+		2020|Any CPU = 2020|Any CPU
+		2021|Any CPU = 2021|Any CPU
+		2022|Any CPU = 2022|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2018|Any CPU.ActiveCfg = 2018|Any CPU
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2018|Any CPU.Build.0 = 2018|Any CPU
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2019|Any CPU.ActiveCfg = 2019|Any CPU
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2019|Any CPU.Build.0 = 2019|Any CPU
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2020|Any CPU.ActiveCfg = 2020|Any CPU
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2020|Any CPU.Build.0 = 2020|Any CPU
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2021|Any CPU.ActiveCfg = 2021|Any CPU
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2021|Any CPU.Build.0 = 2021|Any CPU
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2022|Any CPU.ActiveCfg = 2022|Any CPU
+		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.2022|Any CPU.Build.0 = 2022|Any CPU
 		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C66572F2-EBA5-4FC0-9525-E00B0713C1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -18,5 +33,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0999BB35-D3F7-4B0D-A158-FE961D007425}
 	EndGlobalSection
 EndGlobal

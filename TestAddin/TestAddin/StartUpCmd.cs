@@ -1,4 +1,5 @@
 ﻿using Autodesk.Revit.UI;
+using Autodesk.Revit.UI.Events;
 using System;
 using System.Reflection;
 using System.Collections.Generic;
@@ -177,6 +178,20 @@ namespace TestAddin
             }
             ArchiPanel.AddSeparator();
 
+            //Create the register and show buttons
+            
+            PushButton pushButton4 = ArchiPanel.AddItem(new PushButtonData("Register",
+                   "registerPanel", thisAssemblyPath, "TestAddin.registerPanel")) as PushButton;
+            //Accessibility check of the registration step
+            pushButton4.AvailabilityClassName = "TestAddin.CommandAvailability";
+            pushButton4.ToolTip = "Register dockable window at the zero document state.";
+            pushButton4.LargeImage = GetResourceImage(Assembly.GetExecutingAssembly(), "TestAddin.Resources.register32.png");
+
+            PushButton pushButton5 = ArchiPanel.AddItem(new PushButtonData("Show",
+                   "showPanel", thisAssemblyPath, "TestAddin.showPanel")) as PushButton;
+            pushButton5.ToolTip = "Show the registered dockable window.";
+            pushButton5.LargeImage = GetResourceImage(Assembly.GetExecutingAssembly(), "TestAddin.Resources.show32.png");
+
 
         }
         
@@ -196,6 +211,93 @@ namespace TestAddin
         
 
     }
+    //Creata two classes : show (for showing the dockable panel) and register (to save changes in the panel)
+    [Transaction(TransactionMode.Manual)]
+    public class registerPanel : IExternalCommand
+    {
+        DockablePanel dockableWindow = null;
+        ExternalCommandData eData = null;
+        public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
+        {
+            DockablePanel dock = new DockablePanel();
+            dockableWindow = dock;
+            eData = commandData;
+            DockablePaneId id = new DockablePaneId(new Guid("{5756Df00-16FB-40F0-B7CE-74CCB62C1AFF}"));
+            try
+            {
+                // register dockable pane
+                commandData.Application.RegisterDockablePane(id, "Test Dockable Panel",
+                        dockableWindow as IDockablePaneProvider);
+                TaskDialog.Show("Info Message", "Dockable window have been registered!");
+                // subscribe document opened event
+                commandData.Application.Application.DocumentOpened += new EventHandler<Autodesk.Revit.DB.Events.DocumentOpenedEventArgs>(Application_DocumentOpened);
+                // subscribe view activated event
+                commandData.Application.ViewActivated += new EventHandler<ViewActivatedEventArgs>(Application_ViewActivated);
+                
+            }
+            catch (Exception ex)
+            {
+                // show error info dialog
+                TaskDialog.Show("Info Message", ex.Message);
+            }
+
+            // return result
+            return Result.Succeeded;
+
+        }
+        public void Application_ViewActivated(object sender, ViewActivatedEventArgs e)
+        {
+            // provide ExternalCommandData object to dockable page
+            dockableWindow.CustomInitiator(eData);
+
+        }
+        // document opened event
+        private void Application_DocumentOpened(object sender, Autodesk.Revit.DB.Events.DocumentOpenedEventArgs e)
+        {
+            // provide ExternalCommandData object to dockable page
+            dockableWindow.CustomInitiator(eData);
+        }
+    }
+
+    [Transaction(TransactionMode.Manual)]
+    public class showPanel : IExternalCommand
+    {
+        public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
+        {
+            try
+            {
+                // dockable window id
+                DockablePaneId id = new DockablePaneId(new Guid("{5756Df00-16FB-40F0-B7CE-74CCB62C1AFF}"));
+                DockablePane dockableWindow = commandData.Application.GetDockablePane(id);
+                dockableWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                // show error info dialog
+                TaskDialog.Show("Info Message", ex.Message);
+            }
+            // return result
+            return Result.Succeeded;
+        }
+    }
+
+    // external command availability to check the availability of a document
+    public class CommandAvailability : IExternalCommandAvailability
+    {
+        // interface member method
+        public bool IsCommandAvailable(UIApplication app, CategorySet cate)
+        {
+            // zero doc state
+            if (app.ActiveUIDocument == null)
+            {
+                // disable register btn
+                return true;
+            }
+            // enable register btn
+            return false;
+        }
+    }
+
     // Début de la classe "VCT" associé au bouton précédent
     [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
     public class VCTCommand : IExternalCommand

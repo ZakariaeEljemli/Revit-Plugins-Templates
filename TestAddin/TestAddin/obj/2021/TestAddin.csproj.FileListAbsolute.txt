@@ -1,0 +1,14 @@
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\bin\2021\TestAddin.dll
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\bin\2021\TestAddin.pdb
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin.csprojAssemblyReference.cache
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\DockablePanel.g.cs
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin_MarkupCompile.cache
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin_MarkupCompile.lref
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\DockablePanel.baml
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin.g.resources
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin.Resources.resources
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin.TestDlg.resources
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin.csproj.GenerateResource.cache
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin.csproj.CoreCompileInputs.cache
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin.dll
+C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\2021\TestAddin.pdb
