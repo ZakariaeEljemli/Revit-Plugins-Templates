@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TestAddinApp", "TestAddinApp\TestAddinApp.vdproj", "{0197D959-F81F-4F7A-9E85-6076873B79D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0197D959-F81F-4F7A-9E85-6076873B79D7}.Debug|Default.ActiveCfg = Debug
+		{0197D959-F81F-4F7A-9E85-6076873B79D7}.Debug|Default.Build.0 = Debug
+		{0197D959-F81F-4F7A-9E85-6076873B79D7}.Release|Default.ActiveCfg = Release
+		{0197D959-F81F-4F7A-9E85-6076873B79D7}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7218C703-12D0-4C2C-A966-B95E1FFB30BC}
+	EndGlobalSection
+EndGlobal
