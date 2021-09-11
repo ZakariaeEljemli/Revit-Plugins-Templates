@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\ELJEMLI\Downloads\TestAddin\TestAddin\obj\Debug\
+D:\Formations & Attestations\Development with Revit\Revit-Plugins-Templates\TestAddin\TestAddin\obj\Debug\
 TestAddin
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 1-1842620990
 
-61893016554
-181593646204
+71138446770
+18215490587
 DockablePanel.xaml;
 
-False
+True
 
