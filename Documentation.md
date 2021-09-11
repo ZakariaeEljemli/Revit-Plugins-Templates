@@ -3,8 +3,6 @@
 <h3 align="center">Documentation</h3>
 
  Please refer to the autodesk forum documentation for more details : https://knowledge.autodesk.com/support/revit/learn-explore/caas/CloudHelp/cloudhelp/2014/ENU/Revit/files/GUID-1547E521-59BD-4819-A989-F5A238B9F2B3-htm.html
-<p align="center"><img width=30% src=
-
 
 # Ribbon Panels and Controls
 Revit provides API solutions to integrate custom ribbon panels and controls. These APIs are used with IExternalApplication. 
@@ -14,6 +12,8 @@ or split buttons which are pulldown buttons with a default push button attached.
 In addition to buttons, panels can include radio groups, combo boxes and text boxes. Panels can also include vertical 
 separators to help separate commands into logical groups. 
 Finally, panels can include a slide out control accessed by clicking on the bottom of the panel.
+<p align="center"><img width=70% src="https://user-images.githubusercontent.com/69751645/132957209-912447e0-8e5b-4e09-bec1-a0490a059fd7.PNG"></p>
+
 <h2 align="center">Create a New Ribbon Tab</h2>
 Although ribbon panels can be added to the Add-Ins or Analyze tab, they can also be added to a new custom ribbon tab. This option should only be used if necessary. To ensure that the standard Revit ribbon tabs remain visible, a limit of 20 custom ribbon tabs is imposed.
 The following image shows a new ribbon tab with one ribbon panel and a few simple controls.
@@ -36,6 +36,7 @@ The following image shows a new ribbon tab with one ribbon panel and a few simpl
 <h3 align="left">Combo box</h3>
 
 <h3 align="left">Stacked Panel Items</h3>
+<h3 align="left">Dockable Panel</h3>
 
 
 
