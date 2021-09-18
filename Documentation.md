@@ -17,6 +17,29 @@ Finally, panels can include a slide out control accessed by clicking on the bott
 <h2 align="center">Create a New Ribbon Tab</h2>
 Although ribbon panels can be added to the Add-Ins or Analyze tab, they can also be added to a new custom ribbon tab. This option should only be used if necessary. To ensure that the standard Revit ribbon tabs remain visible, a limit of 20 custom ribbon tabs is imposed.
 The following image shows a new ribbon tab with one ribbon panel and a few simple controls.
+
+```csharp
+publicResult OnStartup(UIControlledApplication application)
+{
+// add a new panel to Revit Toolbar
+                application.CreateRibbonTab("Help Test");
+                
+                // add a new ribbon associated to this panel
+                RibbonPanel ArchiPanel = application.CreateRibbonPanel("Help Test", "Tester le help");
+
+                // Create parameters associated to the button
+                string thisAssemblyPath = Assembly.GetExecutingAssembly().Location;
+
+                // Associated the call method when the button is triggered
+                PushButtonData buttonData1 = new PushButtonData("Archi",
+                   "Bouton Simple", thisAssemblyPath, "TestAddin.VCTCommand");
+
+                // Create the button and associate it to the ribbon
+                PushButton pushButton = ArchiPanel.AddItem(buttonData1) as PushButton;
+                returnResult.Succeeded;
+               }
+```
+
 <h2 align="center">Tooltips</h2>
 
 <h2 align="center">Contextual Help</h2>
