@@ -223,6 +223,18 @@ IList<RibbonItem> stackedItems = ArchiPanel.AddStackedItems(textData, cbData);
 
 <h3 align="left">Dockable Panel</h3>
 
-[A WIP]
+Dockable windows can be moved and resized. They can be floated or docked to a location within the Revit application window, or dragged out of the Revit application window into its own window and moved to another monitor.
 
+The following windows are dockable:
+- Project Browser
+- Properties palette
+- System Browser
+- MEP Fabrication Parts
+- P&ID Modeler
+- Reconcile Hosting
+- Open views in the drawing area
 
+<p align="center"><img width=40% src="https://user-images.githubusercontent.com/69751645/134033115-9deab460-12d8-4533-b46c-b7d51f6487a6.PNG"></p>
+
+Here is an excellent article about how to create dockable panels and it is brilliantly explained by a friend called Min Naung :
+https://twentytwo.space/2020/02/23/revit-addins-dockable-window/
